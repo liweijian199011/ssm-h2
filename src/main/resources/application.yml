@@ -1,0 +1,20 @@
+info:
+  groupId: @project.groupId@
+  artifactId: @project.artifactId@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      settings:
+        web-allow-others: true
+  application:
+    name: h2-app
+  datasource:
+    url: jdbc:h2:mem:test-db
+    username: sa
+    password:
+    schema: classpath:db/schema.sql
+server:
+  port: 1111
+
